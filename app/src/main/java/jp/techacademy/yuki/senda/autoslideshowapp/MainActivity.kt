@@ -144,6 +144,10 @@ class MainActivity : AppCompatActivity() {
             PERMISSIONS_REQUEST_CODE ->
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     getContentsInfo()
+                }else {
+                    binding.btForward.isEnabled = false
+                    binding.btBack.isEnabled = false
+                    binding.btStartStop.isEnabled = false
                 }
         }
     }
